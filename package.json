@@ -1,0 +1,53 @@
+{
+  "name": "ng2-base",
+  "version": "1.0.0",
+  "description": "Basic angular 2 application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "gulp test",
+    "setup": "npm install && jspm install && typings install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://foo.com"
+  },
+  "author": "Olle Thalén",
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/common": "^2.0.1",
+    "@angular/compiler": "^2.0.1",
+    "@angular/core": "^2.0.1",
+    "@angular/forms": "^2.0.1",
+    "@angular/platform-browser": "^2.0.1",
+    "@angular/platform-browser-dynamic": "^2.0.1",
+    "@angular/router": "^3.0.1",
+    "chokidar-socket-emitter": "^0.5.4",
+    "http-server": "^0.9.0",
+    "jspm": "^0.16.45",
+    "open": "0.0.5",
+    "rxjs": "^5.0.0-beta.12",
+    "typings": "^1.4.0",
+    "zone.js": "^0.6.25"
+  },
+  "jspm": {
+    "dependencies": {
+      "@angular/common": "npm:@angular/common@^2.0.1",
+      "@angular/compiler": "npm:@angular/compiler@^2.0.1",
+      "@angular/core": "npm:@angular/core@^2.0.1",
+      "@angular/forms": "npm:@angular/forms@^2.0.1",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.0.1",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.0.1",
+      "@angular/router": "npm:@angular/router@^3.0.1",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.8",
+      "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0",
+      "ts": "github:frankwallis/plugin-typescript@^5.1.2",
+      "zone.js": "npm:zone.js@^0.6.25"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
