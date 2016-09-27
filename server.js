@@ -21,4 +21,4 @@ const server = httpServer.createServer({
 require('chokidar-socket-emitter')({app: server.server});
 
 server.listen(9089);
-open('http://localhost:9089');
+open('http://localhost:9089', 'google chrome');
