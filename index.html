@@ -3,7 +3,7 @@
 <head>
     <title>My First Angular2 App</title>
     <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
+    <script src="jspm.config.js"></script>
 </head>
 <body>
 <my-app>Loading...</my-app>
@@ -18,6 +18,12 @@
     Promise.resolve(readyForMainLoad).then(function() {
         System.import("app").then(function(){ console.log("running") });
     });
+</script>
+<script>
+    function handler() {
+        var x = document.getElementById("abc").innerHTML;
+        console.log("x: " + JSON.stringify(x));
+    }
 </script>
 </body>
 </html>

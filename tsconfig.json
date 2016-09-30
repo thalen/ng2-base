@@ -1,17 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "system",
-    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "rootDir": ".",
+    "baseUrl": "."
   },
-  "exclude": [
-    "jspm_packages",
-    "node_modules",
-    "typings/main.d.ts",
-    "typings/main/**"
-  ],
-  "compileOnSave": false
+  "compileOnSave": false,
+  "files": [
+    "./app/utils/_references.d.ts"
+  ]
 }
