@@ -9,14 +9,26 @@
 <my-app>Loading...</my-app>
 <script>
     var readyForMainLoad;
+    var hr;
+    var hotReloaderService;
+
+    /**
+     * #1. Load the hot reloader service
+     * 2. After the hot reloader has been loaded, but not started, import the application source
+     * 3. Now start up the hot reloader
+     */
     if (location.origin.match(/localhost/)) {
         System.trace = true;
         readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
-            var hr = new HotReloader.default('http://localhost:9089');
+            hotReloaderService = HotReloader;
         });
     }
     Promise.resolve(readyForMainLoad).then(function() {
-        System.import("app").then(function(){ console.log("running") });
+        System.import('./app/styles/main.scss!');
+        System.import("app").then(function() {
+            console.log("running");
+            hr = new hotReloaderService.default('http://localhost:9089');
+        });
     });
 </script>
 <script>

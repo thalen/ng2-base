@@ -11,7 +11,6 @@ SystemJS.config({
       "css": "github:systemjs/plugin-css@0.1.29",
       "plugin-babel": "npm:systemjs-plugin-babel@0.0.15",
       "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.6.0",
-      "text": "github:systemjs/plugin-text@0.0.9",
       "ts": "github:frankwallis/plugin-typescript@5.1.2",
       "clean-css": "npm:clean-css@3.4.20"
     },
@@ -120,6 +119,8 @@ SystemJS.config({
     "github:*/*.json"
   ],
   map: {
+    "text": "github:systemjs/plugin-text@0.0.9",
+    "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.7",
     "@angular/common": "npm:@angular/common@2.0.1",
     "@angular/compiler": "npm:@angular/compiler@2.0.1",
     "@angular/core": "npm:@angular/core@2.0.1",

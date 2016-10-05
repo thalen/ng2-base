@@ -42,16 +42,17 @@
     },
     "dependencies": {
       "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.0.1",
+      "bootstrap-sass": "twbs/bootstrap-sass@^3.3.7",
       "frankwallis/plugin-typescript": "5.1.2",
       "reflect-metadata": "npm:reflect-metadata@^0.1.0",
-      "scss": "mobilexag/plugin-sass@^0.4.6"
+      "scss": "mobilexag/plugin-sass@^0.4.6",
+      "text": "systemjs/plugin-text@^0.0.9"
     },
     "devDependencies": {
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.12",
       "clean-css": "npm:clean-css@^3.4.3",
       "css": "frankwallis/plugin-css@master",
-      "systemjs-hot-reloader": "capaj/systemjs-hot-reloader@^0.5.3",
-      "text": "systemjs/plugin-text@^0.0.2",
+      "systemjs-hot-reloader": "capaj/systemjs-hot-reloader@0.5.3",
       "ts": "frankwallis/plugin-typescript@^5.1.0"
     },
     "peerDependencies": {
