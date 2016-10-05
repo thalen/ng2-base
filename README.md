@@ -1,5 +1,5 @@
 # ng2-base
-Setup for Angular 2 release candidate, configured to use JSPM and SystemJS.
+Setup for Angular 2.0.1, configured to use JSPM and SystemJS.
 ## To get started
 Install jspm and typings globally:
 <pre>

@@ -47,6 +47,8 @@ SystemJS.config({
   },
   transpiler: "plugin-babel",
   typescriptOptions: {
+    "module": "es6",
+    "target": "es6",
     "typeCheck": true,
     "tsconfig": true,
     "typings": {
@@ -61,7 +63,6 @@ SystemJS.config({
   packages: {
     "app": {
       "main": "bootstrap",
-      "format": "system",
       "defaultExtension": "ts",
       "meta": {
         "*.ts": {

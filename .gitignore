@@ -1,6 +1,6 @@
 node_modules/
 jspm_packages/
-build/
 typings/
+build/build*
 .idea/
 npm-debug.log
