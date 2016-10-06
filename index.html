@@ -13,16 +13,15 @@
     var hotReloaderService;
 
     /**
-     * #1. Load the hot reloader service
+     * 1. Load the hot reloader service
      * 2. After the hot reloader has been loaded, but not started, import the application source
      * 3. Now start up the hot reloader
      */
-    if (location.origin.match(/localhost/)) {
-        System.trace = true;
-        readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
-            hotReloaderService = HotReloader;
-        });
-    }
+    System.trace = true;
+    readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
+        hotReloaderService = HotReloader;
+    });
+
     Promise.resolve(readyForMainLoad).then(function() {
         System.import('./app/styles/main.scss!');
         System.import("app").then(function() {
