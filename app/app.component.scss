@@ -1,7 +1,14 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: red;
+$fa-font-path: 'app/styles/fonts/';
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+@font-face {
+  font-family: myFirstFont2;
+  src: url($fa-font-path + 'fontawesome-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+div.test {
+  font-family: myFirstFont2;
 }

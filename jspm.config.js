@@ -11,7 +11,8 @@ SystemJS.config({
       "plugin-babel": "npm:systemjs-plugin-babel@0.0.15",
       "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.6.0",
       "ts": "github:frankwallis/plugin-typescript@5.1.2",
-      "text": "github:systemjs/plugin-text@0.0.9"
+      "text": "github:systemjs/plugin-text@0.0.9",
+      "font-awesome": "npm:font-awesome@4.6.3"
     },
     "packages": {
       "github:capaj/systemjs-hot-reloader@0.6.0": {
@@ -24,6 +25,11 @@ SystemJS.config({
       "npm:debug@2.2.0": {
         "map": {
           "ms": "npm:ms@0.7.1"
+        }
+      },
+      "npm:font-awesome@4.6.3": {
+        "map": {
+          "css": "github:systemjs/plugin-css@0.1.30"
         }
       }
     }

@@ -23,10 +23,11 @@
     });
 
     Promise.resolve(readyForMainLoad).then(function() {
-        System.import('./app/styles/main.scss!');
-        System.import("app").then(function() {
-            console.log("running");
-            hr = new hotReloaderService.default('http://localhost:9089');
+        System.import('./app/styles/main.scss!').then(function () {
+            System.import("app").then(function() {
+                console.log("running");
+                hr = new hotReloaderService.default('http://localhost:9089');
+            });
         });
     });
 </script>

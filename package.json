@@ -23,12 +23,16 @@
     "@angular/platform-browser": "^2.0.1",
     "@angular/platform-browser-dynamic": "^2.0.1",
     "@angular/router": "^3.0.1",
+    "@types/systemjs": "^0.19.29",
     "chokidar-socket-emitter": "^0.5.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
     "http-server": "^0.9.0",
     "jspm": "^0.17.0-beta.22",
-    "@types/systemjs": "^0.19.29",
     "open": "0.0.5",
     "rxjs": "^5.0.0-beta.12",
+    "sass": "^0.5.0",
+    "sass-jspm-importer": "0.0.6",
     "typings": "^1.4.0",
     "zone.js": "^0.6.25"
   },
@@ -49,6 +53,7 @@
       "scss": "mobilexag/plugin-sass@^0.4.6"
     },
     "devDependencies": {
+      "font-awesome": "npm:font-awesome@^4.6.3",
       "plugin-babel": "npm:systemjs-plugin-babel@^0.0.12",
       "systemjs-hot-reloader": "capaj/systemjs-hot-reloader@0.5.3",
       "text": "systemjs/plugin-text@^0.0.9",
@@ -201,6 +206,14 @@
           "net": "@node/net",
           "tty": "@node/tty",
           "util": "@node/util"
+        }
+      },
+      "npm:font-awesome@4.6.3": {
+        "main": "css/font-awesome.css!",
+        "jspmNodeConversion": false,
+        "registry": "jspm",
+        "dependencies": {
+          "css": "0.1"
         }
       },
       "npm:inherits@2.0.1": {
