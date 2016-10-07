@@ -7,7 +7,7 @@
     "start": "node tasks/server",
     "test": "gulp test",
     "setup": "npm install && jspm install && typings install",
-    "build": "node tasks/build"
+    "build": "gulp build-sass && node tasks/build"
   },
   "repository": {
     "type": "git",
