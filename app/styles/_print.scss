@@ -1,0 +1,30 @@
+@media print{
+	#header img.vs-logo{
+		-webkit-filter: grayscale(100%) invert(100%);
+		filter: grayscale(100%) invert(100%);
+	}
+	#header{
+		border-bottom-color: transparent;
+	}
+	button{
+		display: none !important;
+	}
+	#sp-head .back-btn, #cmp-head .back-btn{
+		display: none;
+	}
+	nav{
+		display: none !important;
+	}
+	.jumbotron{
+		display: none;
+	}
+	.hicontrast{
+		display: none;
+	}
+	.sp-prg-select{
+		display: none;
+	}
+	.cmp-pag-ctrl{
+		display: none;
+	}
+}

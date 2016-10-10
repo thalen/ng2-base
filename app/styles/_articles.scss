@@ -1,0 +1,116 @@
+#articles{
+	.row{
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+}
+.articles-wrap{
+	background: $base-light;
+	padding: 10px 20px;
+	padding-bottom: 50px;
+	margin-top:50px;
+	h1{
+		text-align: center;
+		font-family: "League Gothic";
+		border-bottom: 5px solid $base-medium;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+	}
+	p{
+		font-size: 16px;
+	}
+}
+.articles-nav{
+	margin-bottom: 30px;
+	h5{
+		margin: 15px 0;
+	}
+	a{
+		color: $base-dark;
+		font-weight: normal;
+		font-size: 16px;
+	}
+	a.active{
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	a::after{
+		content: "";
+		margin-left: 10px;
+		width: 9px;
+		height: 16px;
+		position: absolute;
+		background: url("img/article_arrow_right.png") no-repeat;
+		background-size: 7px 11px;
+		background-position: 0px 4px;
+	}
+}
+#articles-nav-drop{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.article-text{
+	padding: 0px;
+	margin-bottom:30px;
+}
+.article-language{
+	padding:0px;
+	h4{
+		font-size: 14px;
+	}
+	ul{
+		padding:0px;
+		list-style-type: none;
+	}
+}
+.artWidth {
+	max-width: 61ch;	/* approximately 80 chars width */
+}
+.artTop {
+	margin-top: 1ch;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.articles-wrap{
+		padding: 10px 35px;
+	}
+	.article-language{
+		padding:0px;
+		h4{
+			display: inline;
+		}
+		ul{
+			display: inline;
+			margin-left: 10px;
+		}
+		li{
+			display: inline-block;
+			a:after{
+				content:'|';
+				margin-left: 4px;
+				color: $base-dark;
+				display: inline-block;
+			}
+		}
+		li:last-of-type a:after{
+			display: none;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.articles-wrap{
+		width:80%;
+	}
+	#articles .row{
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

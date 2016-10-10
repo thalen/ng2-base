@@ -1,0 +1,332 @@
+.search-filter-wrap{
+	width: 100%;
+}
+.input-wrap{
+	padding:5px 30px;
+	margin:10px;
+	.ui-select-bootstrap{
+		margin:0 auto;
+		width: 100%;
+		max-width:100%;
+		border-radius:1px;
+	}
+	.ui-select-bootstrap.form-control{
+		padding-bottom: 3px;
+		padding-left: 8px;
+	}
+	.ui-select-bootstrap.form-control:after{
+		content:'';
+		border-top: 6px solid $main-dark;
+    	border-right: 5px solid transparent;
+    	border-left: 5px solid transparent;
+    	position:absolute;
+    	pointer-events: none;
+    	bottom:13px;
+    	right:10px;
+	}
+	.btn-default{
+		box-shadow:none;
+		border-radius: 1px;
+		max-width:100%;
+	}
+	.checkbox-wrap{
+		margin:0 auto;
+		margin-top:10px;
+		text-align: center;
+		width: 100%;
+		border-radius:1px;
+	}
+}
+
+.input-group-wrap{
+	background: $row-even;
+	border-radius:10px;
+	padding: 10px 0;
+	margin: 0px;
+	margin-bottom:20px;
+	.input-wrap{
+		padding:5px;
+	}
+}
+
+.caret{
+	border-top: 6px solid $main-dark;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+.checkbox-wrap{
+	margin-top: 10px;
+	text-align: center;
+	input[type=checkbox]{
+		margin-right: 5px;
+	}
+}
+.close-to-btn{
+	padding: 15px 40px;
+	margin-top:20px;
+	width:100%;
+}
+.range-val{
+	border: 1px solid $main;
+	border-bottom: 2px solid $main;
+	text-align: center;
+	font-weight: bold;
+	width: 60px;
+}
+.slider-wrap{
+	position:relative;
+	margin: 15px 0;
+	span{
+		padding-right: 100px;
+		display: block;
+	}
+	.range-unit {
+	    padding: 2px;
+	    position: absolute;
+	    font-weight: bold;
+	    top: 0px;
+	    right: 0px;
+	}
+	input[type="text"], input[type="number"]{
+		position: absolute;
+		right:30px;
+		top:0px;
+		margin-left: auto;
+		margin-right: 0px;
+	}
+	input[type="number"]{
+		padding-left: 15px;
+	}
+}
+.program-select{
+	font-size: 18px;
+	width: 100%;
+}
+.ui-select-multiple input.ui-select-search {
+  width: 100% !important;
+}
+.search-field-wrap{
+	background:#f5f5f5;
+	padding: 12px 0;
+	.form-group{
+		text-align: center;
+		margin: 0 auto;
+	}
+	.form-control{
+		max-width: 300px;
+		width: 100%;
+		display: inline-block;
+	}
+	.ui-select-multiple.ui-select-bootstrap input.ui-select-search{
+		max-width: 300px;
+		width:100% !important;
+	}
+	.info-btn{
+		display: none;
+	}
+}
+.search-params-wrap{
+	position: relative;
+	padding-top:22px;
+	h3{
+		text-align: center;
+		font-family: 'League Gothic';
+		margin-top: 14px;
+	}
+	h3.or-text{
+		opacity: 0.5;
+	}
+	.tab-pane.active{
+		background:$sp-light;
+		border:1px solid $base-medium;
+		padding-top:10px;
+	}
+	.tab-pane .input-wrap{
+		padding: 5px 10px;
+	}
+	.nav-tabs.nav-justified{
+		margin-bottom:-1px;
+	}
+	.nav-tabs.nav-justified > li{
+		float:left;
+		visibility: hidden;
+	}
+	.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+	    border-bottom-color: transparent;
+	    background: $sp-light;
+	    border-radius: 0px;
+	    font-family: 'League Gothic', serif;
+	    padding-bottom: 6px;
+	}
+	.nav-tabs.nav-justified > li > a{
+		visibility: visible;
+	    border:1px solid $base-medium;
+	    background: $row-even;
+	    border-radius: 0px;
+	    font-family: 'League Gothic', serif;
+	    padding-bottom: 6px;
+	    font-size: 22px;
+	    height: 46px;
+	    color: $base-dark;
+		width:auto;
+		margin-bottom:1px;
+	}
+
+}
+.show-school-wrap{
+	padding: 10px 0;
+	background: $secondary-light;
+	text-align: center;
+	margin-top:30px;
+	.btn{
+		display: block;
+		width: 100%;
+		margin:10px 0;
+	}
+}
+.clear-fields{
+	border:1px solid transparent;
+	border-radius: 25px;
+	font-size:20px;
+	padding: 10px 70px 10px 30px;
+	position: relative;
+	&:after{
+		font-family: "Font Awesome";
+	    content: "\f057";
+	    color: #fff;
+	    font-size:36px;
+	    position: absolute;
+	    right:10px;
+	    top:-1px;
+	}
+}
+.schools-show{
+	color:#fff;
+	background:$secondary url("img/rund_pil.svg") no-repeat;
+	background-position: right 10px top 8px;
+	padding: 10px 70px;
+	padding-right:80px;
+	border-radius: 25px;
+	font-size:20px;
+	&:hover{
+		color:#fff;
+		background:darken($secondary, 20%) url("img/rund_pil.svg") no-repeat;
+		background-position: right 10px top 8px;
+	}
+	&:focus{
+		color:#fff;
+	}
+}
+.schools-hide{
+	@extend .schools-show;
+	background:$secondary  url("img/rund_pil_upp.svg") no-repeat;
+	background-position: right 10px top 8px;
+	&:hover{
+		color:#fff;
+		background:darken($secondary, 20%) url("img/rund_pil_upp.svg") no-repeat;
+		background-position: right 10px top 8px;
+	}
+	&:focus{
+		color:#fff;
+	}
+}
+.filter-header-wrap{
+	padding: 10px 0;
+	background: $base-medium;
+	width: 100%;
+	text-align: center;
+	h3{
+		margin:0px;
+		font-family: 'League Gothic';
+	}
+}
+.filter-params-wrap{
+	width: 100%;
+	background: $base-light;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.search-params-wrap{
+		.tab-pane.active{
+			background:$sp-light;
+			border:1px solid $base-medium;
+			padding-top:33px;
+			min-height: 200px;
+		}
+		.tab-pane .input-wrap{
+			padding:5px 30px;
+		}
+		.nav-tabs.nav-justified > li{
+			float:none;
+		    vertical-align: bottom;
+		}
+		.nav-tabs.nav-justified > li > a{
+		    border:1px solid $base-medium;
+		    background: $row-even;
+		    border-radius: 0px;
+		    font-family: 'League Gothic', serif;
+		    padding-bottom: 6px;
+		    font-size: 24px;
+		    color: $base-dark;
+			width:75%;
+			margin-bottom:0px;
+		}
+		.nav-tabs.nav-justified > li:first-of-type > a{
+			margin-left:20%;
+		}
+	}
+	.input-wrap{
+		.ui-select-bootstrap{
+			max-width: 300px;
+		}
+	}
+	.input-group-wrap{
+		margin: 0 55px;
+		margin-bottom:20px;
+	}
+	.search-field-wrap{
+		button[type="submit"]{
+			margin-top:-3px;
+		}
+		.info-btn{
+			display: block;
+		    right: 50%;
+		    top: -2px;
+		    -webkit-transform: translateX(188px);
+		            transform: translateX(188px);
+		    position: absolute;
+		}
+	}
+	.show-school-wrap{
+		.btn{
+			display: inline-block;
+			width: auto;
+			margin:0;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	h3.or-text{
+		opacity: 0.5;
+		position:absolute;
+		right: 30%;
+		z-index:99;
+	}
+	.input-group-wrap{
+		margin-bottom:0px;
+	}
+	.search-params-wrap{
+		.row{
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

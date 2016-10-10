@@ -1,21 +1,3 @@
-//Import the bootstrap theme
-@import 'jspm:bootstrap-sass/assets/stylesheets/bootstrap';
-
-//Import all font-awesome stuff
-@import "jspm:font-awesome/scss/variables";
-@import "jspm:font-awesome/scss/mixins";
-@import "jspm:font-awesome/scss/path";
-@import "jspm:font-awesome/scss/core";
-@import "jspm:font-awesome/scss/larger";
-@import "jspm:font-awesome/scss/fixed-width";
-@import "jspm:font-awesome/scss/list";
-@import "jspm:font-awesome/scss/bordered-pulled";
-@import "jspm:font-awesome/scss/animated";
-@import "jspm:font-awesome/scss/rotated-flipped";
-@import "jspm:font-awesome/scss/stacked";
-@import "jspm:font-awesome/scss/icons";
-@import "jspm:font-awesome/scss/screen-reader";
-
 @font-face {
     font-family: 'League Gothic';
     src: url('fonts/leaguegothic-regular-webfont.woff') format('woff');
@@ -29,26 +11,28 @@
     font-style: normal;
 }
 
-//color variables
-$main: #65B561; //green
-$main-dark: #408447; //dark green
-$main-light: #dff0de; //light green
-$accent: #FFFF33; //yellow
-$secondary-dark: #6bb1b5; //dark blue
-$secondary: #4fc1e9; //blue
-$secondary-light: #def3fa; //light blue
-$link: #659be3; //slightly darker blue
+//high contrast color variables
+$main: #757575;
+$main-dark: #757575;
+$main-light: #EAEAEA;
+$accent: #F2F2F2;
+$secondary-dark: #333;
+$secondary: #505050; 
+$secondary-light: #F2F2F2; 
+$link: #282828;
 $background: #cdcdcd; 
-$inactive: #e7eaef;
-$sp-light: #f7f8fc; //light grey/blue 
-$base-light: #f5f5f5; //light grey
-$base-medium: #e8e3df; //medium grey
-$base-dark: #222222; //dark grey
-$base-btn: #ABB3BE;
-$checked: #ffc486; //light orange
+$inactive: #D3D3D3;
+$sp-light: #F2F2F2; 
+$base-light: #DFDFDF;
+$base-medium: #9C9C9C; 
+$base-dark: #333; 
+$base-btn: #757575;
+$checked: #333; 
 
-$row-odd: #fcf5ed;
-$row-even: #f0f0f0;
+$row-odd: #F2F2F2;
+$row-even: #DFDFDF;
+
+
 
 //mixins & general styles
 .reset {
@@ -60,11 +44,11 @@ $row-even: #f0f0f0;
 	box-shadow:none;
 }
 .word-wrap {
-	word-break: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
+  word-break:     break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens:    auto;
+  -ms-hyphens:         auto;
+      hyphens:         auto;
 }
 .no-data {
 	font-size: 16px !important;
@@ -111,9 +95,8 @@ $row-even: #f0f0f0;
 	background:transparent;
 	color: $base-btn;
 	font-size: 24px;
-	&:focus, &:hover, &:active, &:active:focus{
+	&:focus, &:hover, &:active{
 		background: transparent;
-		background-color: none;
 		border:0px;
 		box-shadow: none;
 		color:darken($base-btn, 10%);
@@ -128,8 +111,7 @@ $row-even: #f0f0f0;
 	box-shadow: none;
 	background: lighten($base-dark, 10%);
 	color: #fff;
-	width: 300px;
-	margin:0px;
+	width: 500px;
 	max-width: 90%;
 }
 .popover-title{
@@ -138,16 +120,7 @@ $row-even: #f0f0f0;
 	border-radius: 0px;
 }
 .popover.bottom > .arrow:after{
-	border-bottom-color: lighten($base-dark, 10%);
-}
-.popover.top > .arrow:after{
-	border-top-color: lighten($base-dark, 10%);
-}
-.popover.left > .arrow:after{
-	border-left-color: lighten($base-dark, 10%);
-}
-.popover.right > .arrow:after{
-	border-right-color: lighten($base-dark, 10%);
+	border-bottom-color: lighten($base-dark, 10%);;
 }
 .base{
 	background: $base-btn;
@@ -174,11 +147,6 @@ $row-even: #f0f0f0;
 	border: 2px solid $secondary;
 	border-radius: 5px;
 	background: $secondary-light;
-}
-
-.main-header {
-	font-weight: 200;
-	font-size: 18px;
 }
 
 //loader spinner - apply loader class to button when loading (requires font awesome)
@@ -239,13 +207,10 @@ body.tab-navigation{
 }
 
 //import components
-@import "bourbon/settings/prefixer";
-@import "bourbon/addons/prefixer";
-@import "bourbon/css3/transform";
 @import "header.scss";
 @import "search.scss";
 @import "result-list.scss";
-@import "articles.scss";
+@import "articles";
 @import "slider.scss";
 @import "footer.scss";
 @import "resp-table.scss";
@@ -253,17 +218,3 @@ body.tab-navigation{
 @import "sp-survey.scss";
 @import "sp-grades.scss";
 @import "compare.scss";
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-   /* IE10+ specific styles go here */
-   .sp-social-share{
-		overflow: auto;
-		ul{
-			display: block;
-			list-style-type: none;
-		}
-		li{
-			float:left;
-		}
-	}  
-}

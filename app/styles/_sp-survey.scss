@@ -1,0 +1,166 @@
+//color variables
+$pos: #66b661; //green
+$med-pos: #a3d36f; //light green
+$med-neg: #ff8a0c; //orange
+$neg: #e65b46; //red
+$unknwn: #cdd2d8; //grey
+
+$bar-height: 20px;
+
+.survey{
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+	.pos{
+		background:$pos;
+	}
+	.pos-med{
+		background: $med-pos;
+	}
+	.neg-med{
+		background: $med-neg;
+	}
+	.neg{
+		background: $neg;
+	}
+	.unknwn{
+		background: $unknwn;
+	}
+
+	h3{
+		position: relative;
+		text-align: center;
+		font-family: "League Gothic";
+		font-size: 32px;
+		.side-text{
+			position: relative;
+			margin-top: 10px;
+			display: block;
+			font-size:22px;
+			color:lighten($base-dark, 40%);
+		}
+	}
+	.no-border{
+		padding: 30px 0px;
+		span{
+			text-align: left;
+		}
+	}
+}
+.survey-legend{
+	list-style-type: none;
+	padding:0px;
+	margin-bottom: 40px;
+	li{
+		display: block;
+	}
+	.legend-block{
+		display: inline-block;
+		height: $bar-height;
+		width: $bar-height;
+		margin-right: 10px;
+		vertical-align: top;
+	}
+	.legend-text{
+		font-size: 16px;
+		margin-right: 10px;
+	}
+}
+
+.survey-result:nth-child(odd){
+	background:$base-light;
+}
+.survey-result{
+	@extend .grade-stat;
+	padding:20px 15px;
+	// h4 span:before{
+	// 	content:'Medel';
+	// 	position: absolute;
+	// 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	// 	top:0px;
+	// 	right:0px;
+	// 	font-size:14px;
+	// }
+	.whole-bar{
+		margin-top:($bar-height+20px);
+		display: block;
+		margin-left:0px;
+		height: $bar-height;
+	}
+	.bar-fill{
+		float:left;
+		display: block;
+		height: 100%;
+		margin:0px;
+		position:relative;
+	}
+	.bar-text{
+		position:absolute;
+		top:-($bar-height+10px);
+		font-family: "League Gothic";
+		font-size: 20px;
+	}
+}
+.survey-intro{
+	background:$base-light;
+	padding: 15px 30px;
+	.ui-select-container{
+		margin-bottom:15px;
+	}
+}
+.survey-select{
+	text-align: center;
+}
+#survey-select-nav{
+	#sp-nav-drop {
+		width: 75%;
+		margin-top:15px;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.survey-result:nth-child(odd){
+		background:none;
+	}
+	.survey{
+		h3{
+			.side-text{
+				margin-top: 0px;
+				position: absolute;
+				right:0px;
+				bottom:0px;
+				color:lighten($base-dark, 40%);
+			}
+		}
+		.no-border{
+			padding: 30px 0px;
+		}
+	}
+	.survey-legend{
+		text-align: center;
+		li{
+			display: inline-block;
+		}
+	}
+	.survey-result{
+		.bar-text{
+			font-size: 24px;
+		}
+		.whole-bar{
+			width:auto;
+			margin-left:60px;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

@@ -1,0 +1,355 @@
+.cmp-orientation{
+	width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#cmp-head{
+	#sp-head .btn {
+		margin:0px;
+	}
+}
+.schoolLink {
+    display: block;
+    border-bottom: 1px solid #dff0de;
+    font-family: "League Gothic";
+    color: #659be3;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0 -15px;
+    font-size: 20px;
+    padding: 8px 15px;
+}
+.schoolUnit{
+	display: inline-block;
+	margin-left: 5px;
+	color: $base-dark;
+	cursor: auto;
+}
+
+.text-align-center {
+	text-align: center;
+}
+.text-align-left {
+	text-align: left !important;
+}
+.cmp-header .back-btn{
+	font-size: 40px;
+}
+.cmp-info-wrap{
+	border-top:2px solid $main;
+	position: relative;
+	padding-top:40px;
+	margin-top:10px;
+}
+.cmp-sub-info-wrap{
+	border-top:2px solid $base-medium;
+	position: relative;
+	padding-top:30px;
+	margin-top:30px;
+	button{
+		position: absolute;
+		left:0px;
+		top:0px;
+		background: #fff;
+		border:0px;
+		transform: translateY(-50%);
+		font-family: "League Gothic";
+		font-size: 24px;
+		padding: 15px;
+		padding-left: 0px;
+		z-index:1;
+	}
+}
+.toggle-open{
+	&:before{
+		content:'\f078';
+		font-family: "Font Awesome";
+	    font-size: 20px;
+	    width: 40px;
+	    display: inline-block;
+	}
+}
+.toggle-closed{
+	&:before{
+		content:'\f054';
+		font-family: "Font Awesome";
+	    font-size: 20px;
+	    width: 40px;
+	    display: inline-block;
+	}
+}
+.cmp-info-toggle{
+	position: absolute;
+	top:0px;
+	left:0px;
+	transform: translateY(-50%);
+	margin:0px;
+	background: #fff;
+	border:0px solid red;
+	padding:15px;
+	padding-bottom: 22px;
+	padding-left: 30px;
+	margin:0px;
+	font-family: 'League Gothic';
+	font-size: 24px;
+	
+}
+.school-remove-sm{
+    color: $base-btn;
+    font-family: "Font Awesome";
+    background: none;
+    border: 0px;
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.cmp-school-name{
+	display: none;
+	font-family: 'League Gothic';
+	position: relative;
+	h2{
+		background: $main-light;
+		padding: 15px;
+		padding-right: 35px;
+		border-radius: 5px;
+		@extend .word-wrap;
+		text-align: center;
+		a{
+			color:$base-dark;
+			text-decoration: underline;
+			&:hover, &:active{
+				color:$base-dark;
+				text-decoration: underline;
+			}
+		}
+	}
+	button{
+		color: lighten($base-dark, 20%);
+		font-family: "Font Awesome";
+		background: none;
+		border:0px;
+		font-size: 22px;
+		position: absolute;
+		right:20px;
+		top:(55%);
+		transform: translateY(-50%);
+	}
+}
+.cmp-info-toggle.cmp-info-open{
+	&:before{
+		font-family: "Font Awesome";
+		content: "\f078";
+		font-size: 14px;
+		position: absolute;
+		left: 5px;
+		top:21px;
+	}
+}
+.cmp-info-toggle.cmp-info-closed{
+	&:before{
+		font-family: "Font Awesome";
+		content: "\f054";
+		font-size: 14px;
+		position: absolute;
+		left: 5px;
+		top:22px;
+	}
+}
+.pagination{
+	padding-left: 15px;
+}
+.pagination > li > a, .pagination > li > span{
+	color: $base-dark;
+	font-weight: 600;
+	&:hover{
+		color: $base-dark;
+	}
+}
+.pagination > li.active > a, .pagination > li.active > span{
+	background: $main;
+	border-color: $main;
+	&:hover, &:focus{
+		color: #fff;
+		background: $main-dark;
+		border-color: $main-dark;
+	}
+}
+.cmp-info{
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom:0px;
+	dd,dt{
+		border-bottom: 1px solid $main-light;
+	}
+	dt{
+		padding:8px 15px;
+	}
+	dd.cat-grp{
+		padding:0 15px;
+		div:not(.schoolLink){
+			padding:0px;
+		}
+		.popover-content {
+		    padding: 9px 14px;
+		}
+	}
+
+	// dd:before{
+	// 	content: attr(data-school-name);
+	// 	padding:8px 15px;
+	// 	padding-left:30px;
+	// 	display: block;
+	// 	border-bottom: 1px solid $main-light;
+	// 	font-family: "League Gothic";
+	// 	color: $link;
+	// 	text-decoration: underline;
+	// 	cursor: pointer;
+	// 	margin: 0 -15px;
+	// 	font-size: 20px;
+	// }
+	p{
+		text-align: left;
+		padding:8px 5px;
+		padding-left:30px;
+		margin:0px;
+		position: relative;
+		min-height: 50px;
+		.info-btn{
+			position: absolute;
+			top:4px;
+			right:3px;
+		}
+	}
+}
+
+.cmp-cat{
+	font-family: "League Gothic";
+	padding: 0 15px;
+	text-align: center;
+}
+.cmp-pag-ctrl{
+	position: relative;
+	text-align: center;
+}
+.cmp-pag-fwd, .cmp-pag-bck{
+	display: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	#cmp-head{
+		.back-btn{
+			position: absolute;
+			left:0px;
+			top:50%;
+		}
+	}
+	.cmp-separator{
+		display: block;
+		position: absolute;
+		top:0px;
+		left:0px;
+		width:2px;
+		background: $main-light;
+	}
+	div[data-ng-repeat="school in getSchoolNameCompareList(pageNo)"]:first-of-type .cmp-school-name .cmp-separator{
+		display: none;
+	}
+	.cmp-school-name{
+		display: block;
+	}
+	.cmp-info{
+		font-size:16px;
+		dd,dt{
+			border-bottom: 0px;
+		}
+		// dd.cat-grp{
+		// 	padding:0px;
+		// 	margin: 0 10px;
+		// 	div{
+		// 		padding:0px;
+		// 	}
+		// 	.popover-content {
+		// 	    padding: 9px 14px;
+		// 	}
+		// 	.row{
+		// 		margin: 0px;
+		// 	}
+		//     p:before{
+		//     	display: none;
+		//     }	
+		// }
+		// dd.cat-grp.col-sm-9{
+		// 	width: "-moz-calc(75% - 20px)";
+		// 	width: "-webkit-calc(75% - 20px)";
+		// 	width: "-o-calc(75% - 20px)";
+		// 	width: "calc(75% - 20px)";
+		// }
+		// dd.cat-grp.col-sm-6{
+		// 	width: "-moz-calc(50% - 20px)";
+		// 	width: "-webkit-calc(50% - 20px)";
+		// 	width: "-o-calc(50% - 20px)";
+		// 	width: "calc(50% - 20px)";
+		// }
+		// dd.cat-grp.col-sm-3{
+		// 	width: "-moz-calc(25% - 20px)";
+		// 	width: "-webkit-calc(25% - 20px)";
+		// 	width: "-o-calc(25% - 20px)";
+		// 	width: "calc(25% - 20px)";
+		// }
+
+		dd:before{
+			display: none;
+		}
+		p{
+			text-align: center;
+			padding:10px 5px;
+			margin:0px;
+			min-height: 42px;
+		}
+	}
+	.cmp-info:nth-child(odd){
+		p{
+			background: $row-odd;
+		}
+	}
+	.cmp-info:nth-child(even){
+		p{
+			background: $row-even;
+		}
+	}
+
+	.cmp-cat{
+		text-align: left;
+	}
+	.cont-right h2{
+	 	border-top-right-radius: 0px;
+	 	border-bottom-right-radius: 0px;
+	 	border-right: 2px dashed rgba(0,0,0,0.3); 
+	}
+	.cont-left h2{
+	 	border-top-left-radius: 0px;
+	 	border-bottom-left-radius: 0px;
+	 	border-left: 2px dashed rgba(0,0,0,0.3); 
+	}
+	.pagination{
+		padding-left: 0px;
+	}
+	.pagination > li > a, .pagination > li > span{
+		padding: 10px 20px;
+	}
+	.school-remove-sm{
+		display: none;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

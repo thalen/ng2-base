@@ -1,0 +1,105 @@
+$stat-witdh:60px;
+
+.grade-stats{
+	background:$main-light;
+	margin-top:10px;
+	padding-top:20px;
+	padding-bottom: 10px;
+	.container{
+		background: #fff;
+		padding:0px;
+	}
+}
+.grade-header{
+    font-family: "League Gothic";
+    font-size: 32px;
+}
+.grade-stat{
+	h4{
+		position: relative;
+		margin-left: $stat-witdh;
+		line-height: 34px;
+		span{
+			position: absolute;
+			font-size: 34px;
+			padding-right: 10px;
+			vertical-align: middle;
+			-webkit-transform: translateX(-100%);
+			        transform: translateX(-100%);
+		}
+	}
+	p{
+		margin-top: -5px;
+		margin-left: $stat-witdh;
+		border-top: 3px solid $base-medium;
+		padding-top: 5px;
+		font-size: 18px;
+	}
+}
+.grade-tabs{
+	list-style-type: none;
+	padding:0px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.grade-tab{
+	padding:5px 10px;
+	border:0px;
+	background: $main-light;
+	font-family: "League Gothic";
+	font-size: 24px;
+	margin:5px;
+}
+.grade-tab.active{
+	background: $main;
+	color:#fff;
+}
+.grade-graphs{
+	h3{
+		font-family: "League Gothic";
+		font-size: 32px;
+	}
+}
+.canvas{
+	width: 100%;
+	height: 320px;
+}
+.graph-bg{
+	width: 100%;
+	height: 320px;
+	display: table-cell;
+	vertical-align: bottom;
+}
+.graph-bar{
+	display: inline-block;
+	width: 50px;
+	background: red;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.grade-tabs li{
+		display: inline-block;
+	}
+	.grade-stat{
+		h4{
+			margin-left: $stat-witdh+20px;
+			span{
+				-webkit-transform: translateX(-100%);
+				        transform: translateX(-100%);
+			}
+		}
+		p{
+			margin-left: $stat-witdh+20px;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

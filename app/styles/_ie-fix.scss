@@ -1,0 +1,30 @@
+//fixes/removes display errors in Internet Explorer
+input[type=range]{
+	display: none;
+}
+
+.filter-params-wrap input[type=text]+input{
+	display: none;
+}
+.filter-params-wrap input[type=text]{
+	padding:5px 0px;
+}
+.sp-social-share{
+	overflow: auto;
+	ul{
+		display: block;
+		list-style-type: none;
+	}
+	li{
+		float:left;
+	}
+}
+@media (max-width: 990px) {
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	td{
+		width: 100%;
+		float:left;
+	}
+}

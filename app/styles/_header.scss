@@ -1,0 +1,237 @@
+#header{
+	background: $main;
+	/*height: 75px;*/
+	margin-bottom: 0px;
+	border:0px;
+	border-bottom: 3px solid #fff;
+	border-radius: 0px;
+	color:#FFF;
+	position: relative;
+	width: 100%;
+	.sv-box {
+		position: relative;
+		height: 74px;
+	}
+	.testdata {
+		text-align: center;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		color: red;
+		font-weight: 600;
+		border: 2px red dashed;
+	}
+	.vs-logo{
+		display: block;
+		margin:0 auto;
+		padding:15px;
+		width:175px;
+	}
+	.sv-logo{
+		position: absolute;
+		bottom:15px;
+		right:15px;
+	}
+}
+.hicontrast {
+    /*position: absolute;*/
+    top: 12px;
+    left: 15px;
+    a{
+    	color: rgba(0,0,0,0.5);
+    	display: block;
+    	&:hover{
+    		color: rgba(0,0,0,0.7);
+    	}
+    }
+}
+nav.main-nav{
+	position: absolute;
+	background:$main-dark;
+	width: 0px; //animate width to 240px -> 0px when hidden
+	height: auto;
+	right:0px;
+	top:0px;
+	z-index: 10;
+	.nav{
+		overflow: hidden;
+		padding: 40px 15px;
+		li>a{
+			color:#fff;
+			font-size: 16px;
+			text-transform: uppercase;
+			&:hover, &:focus{
+				background: none;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.menu-toggle{
+	position:absolute;
+	top:0px;
+	left:-55px;
+	background: $main-dark;
+	margin:0px;
+	border:0px;
+	padding:10px;
+	&:hover{
+		background: darken($main-dark, 10%);
+	}
+}
+#education-image1, #education-image2, #education-image3, #education-image4{
+	background: #fff;
+	height: auto;
+	color:#fff;
+	position: relative;
+	padding:0px;
+	margin-bottom:0px;
+}
+.ed-select-wrap{
+	width: 100%;
+}
+#education-level{
+	text-align: center;
+	padding: 0px;
+	@extend .word-wrap;
+	.btn-lg{
+		@extend .word-wrap;
+		float:left;
+		display: block;
+		height: 75px;
+		width: 50%;
+		border:0px;
+		border-left:3px solid #fff;
+		border-radius: 0px;
+		background:$main;
+		position:relative;
+		color:#fff;
+		&:first-of-type{
+			border-left:0px;
+		}
+		h2{
+			@extend .word-wrap;
+			display: inline;
+			margin:0px;
+			line-height: 60px;
+			vertical-align: middle;
+			font-size: 27px;
+			text-transform: uppercase;
+			font-family: 'League Gothic';
+		}
+	}
+	.btn-lg.active{
+		background:$main-dark;
+		box-shadow: none;
+		&:after{
+			content:'';
+			display: block;
+			position: absolute;
+			bottom: 15px;
+			left: 20px;
+			right: 20px;
+			height: 3px;
+			background: $accent;
+		}
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	#header{
+		border-bottom: 3px solid $accent;
+		/*height: 77px;*/
+		.vs-logo{
+			display: inline-block;
+			margin:0 auto;
+			padding: 10px 0px;
+			width: auto;
+			height: 74px;
+		}
+	}
+	#education-image1{
+		background: url("img/valjaskola_headerbild_05.jpg");
+		background-size: cover;
+		background-position: center center;
+		height: 262px;
+		padding:30px 15px;
+	}
+	#education-image2{
+		background: url("img/valjaskola_headerbild_06.jpg");
+		background-size: cover;
+		background-position: center center;
+		height: 262px;
+		padding:30px 15px;
+	}
+	#education-image3{
+		background: url("img/valjaskola_headerbild_05.jpg");
+		background-size: cover;
+		background-position: center center;
+		height: 262px;
+		padding:30px 15px;
+	}
+	#education-image4{
+		background: url("img/valjaskola_headerbild_06.jpg");
+		background-size: cover;
+		background-position: center center;
+		height: 262px;
+		padding:30px 15px;
+	}
+	.ed-select-wrap{
+		width: 100%;
+		background: fade($main, 60%);
+		position: absolute;
+		bottom:0px;
+		left:0px;
+		right:0px;
+		height: 106px;
+	}
+	#education-level{
+		padding: 10px 0;
+		.btn-lg{
+			float:none;
+			display: inline-block;
+			height: 85px;
+			width: 260px;
+			border-left:0px;
+			border-bottom: 2px solid $accent;
+			position:relative;
+			margin-left:10px;
+			color:#fff;
+			&:first-of-type{
+				margin-left:0px;
+			}
+			h2{
+				margin:0px;
+				line-height: 70px;
+				vertical-align: middle;
+				font-size: 32px;
+				text-transform: uppercase;
+			}
+		}
+		.btn-lg.active{
+			border: 2px solid $accent;
+			background:$main-dark;
+			box-shadow: none;
+			&:after{
+				content:'';
+				display: block;
+				position: absolute;
+				bottom: 11px;
+				left: 35px;
+				right: 35px;
+				height: 2px;
+				background: $accent;
+			}
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

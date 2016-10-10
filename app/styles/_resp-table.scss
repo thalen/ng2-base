@@ -1,0 +1,39 @@
+@media (max-width: 990px) {
+	.table>tbody>tr>td{
+		padding:16px;
+	}
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	//hidden but not display: none for accessability
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid $base-medium; }
+	
+	td {
+		@extend .word-wrap;
+		border: none;
+		border-bottom: 1px solid $base-light; 
+		position: relative;
+		padding-left: 50% !important;
+
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+	}
+
+	//label tableheads
+	td::before { 
+		content: attr(data-tablehead); 
+		font-weight: bold;
+	}
+}
