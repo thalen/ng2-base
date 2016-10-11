@@ -66,6 +66,11 @@ SystemJS.config({
         "*.scss": {
           "loader": "scss"
         }
+      },
+      "map": {
+        "./environments/environment.ts": {
+          "~production": "./environments/environment-dev.ts"
+        }
       }
     },
     "npm:@angular/forms@2.0.1": {

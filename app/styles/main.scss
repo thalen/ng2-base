@@ -1,6 +1,8 @@
 //Import the bootstrap theme
 @import 'jspm:bootstrap-sass/assets/stylesheets/bootstrap';
 
+$fa-font-path: "/app/styles/fonts" !default;
+
 //Import all font-awesome stuff
 @import "jspm:font-awesome/scss/variables";
 @import "jspm:font-awesome/scss/mixins";

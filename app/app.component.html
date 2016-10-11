@@ -1,21 +1,16 @@
-<h1>My First Angular 2 App</h1>
-<p>{{foo}}</p>
-
-<div id="abc" style="margin-top:10px">
-    {{bar}}
-
-</div>
 <div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <button class="btn btn-default" (click)="test()">The button</button>
+    <header id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hicontrast col-xs-2 col-md-1" *ngIf="!getHiContrast()">
+                    <a href="#" (click)="setHiContrast(true)"><i class="fa fa-eye-slash fa-3x"></i></a>
+                </div>
+                <div class="hicontrast col-xs-2 col-md-1" *ngIf="getHiContrast()">
+                    <a href="#" (click)="setHiContrast(false)"><i class="fa fa-eye fa-3x"></i></a>
+                </div>
+                <a class="col-xs-8 col-xs-offset-0 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4" href="#grundskola/sokClear"><img class="vs-logo" src="app/styles/img/valja_skola_logo.svg" alt="Välja skola"></a>
+                <div class="sv-box hidden-xs col-sm-2 col-sm-offset-2 col-md-1 col-md-offset-1 col-md-push-3"><a href="http://www.skolverket.se"><img class="sv-logo" src="app/styles/img/skolverket_logo.svg" alt="Skolverket"></a></div>
             </div>
         </div>
-        <div class="row test" style="margin-top:5px">
-            Some text
-        </div>
-    </div>
-
+    </header>
 </div>
-

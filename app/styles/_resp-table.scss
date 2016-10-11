@@ -15,7 +15,7 @@
 	tr { border: 1px solid $base-medium; }
 	
 	td {
-		@extend .word-wrap;
+		//@extend .word-wrap;
 		border: none;
 		border-bottom: 1px solid $base-light; 
 		position: relative;

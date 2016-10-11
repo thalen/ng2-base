@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <title>My First Angular2 App</title>
+    <title>Välja skola (Angular 2.0)</title>
+    <base href="/">
     <script src="jspm_packages/system.js"></script>
     <script src="jspm.config.js"></script>
 </head>
@@ -23,19 +24,12 @@
     });
 
     Promise.resolve(readyForMainLoad).then(function() {
-        System.import('./app/styles/main.scss!').then(function () {
-            System.import("app").then(function() {
-                console.log("running");
-                hr = new hotReloaderService.default('http://localhost:9089');
-            });
+        System.import('./app/styles/main.scss!');
+        System.import('app').then(function() {
+            console.log('running');
+            hr = new hotReloaderService.default('http://localhost:9089');
         });
     });
-</script>
-<script>
-    function handler() {
-        var x = document.getElementById("abc").innerHTML;
-        console.log("x: " + JSON.stringify(x));
-    }
 </script>
 </body>
 </html>
